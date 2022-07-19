@@ -1,0 +1,15 @@
+.select {
+  transition: 0.5s;
+  width: 130px;
+  height: 40px;
+  border: 3px double #000;
+  color: #0e5ddd;
+  border-radius: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #444;
+}
