@@ -37,6 +37,8 @@ const HomeBox = styled.div`
   height: 100vh;
   display: flex;
   position: relative;
+  padding: 2rem;
+  box-sizing: border-box;
 `;
 
 const HomeContainer = styled.div`
@@ -45,8 +47,20 @@ const HomeContainer = styled.div`
   /* overflow: hidden; */
   width: 80%;
   height: 100vh;
-  /* background-color: #999; */
+  background-color: #999;
   position: relative;
+  @media (max-width: 1200px) {
+    & {
+      width: 100%;
+      background-color: green;
+    }
+  }
+  @media (max-width: 800px) {
+    & {
+      width: 100%;
+      background-color: blue;
+    }
+  }
 `;
 
 const Line = styled.div`
@@ -54,12 +68,31 @@ const Line = styled.div`
   height: 50px;
   border-bottom: 1px solid #444;
   margin-top: 15rem;
+  @media (max-width: 800px) {
+    & {
+      display: none;
+    }
+  }
 `;
 const HomeFont = styled.h1`
   font-size: 5.5rem;
   font-family: "Cormorant SC", serif;
   margin-top: 10rem;
   margin-left: 20rem;
+  @media (max-width: 1200px) {
+    & {
+      margin-left: 50px;
+    }
+  }
+  @media (max-width: 800px) {
+    & {
+      width: 100%;
+      margin-top: 3rem;
+      margin-left: 50px;
+      font-size: 4rem;
+      transition: 0.5s;
+    }
+  }
 `;
 
 const HomeImg = styled.div`
@@ -71,7 +104,21 @@ const HomeImg = styled.div`
   right: 1rem;
   background-image: url(https://images.unsplash.com/photo-1611244420182-82cc3323eadc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHJpbmtpbmclMjB0ZWF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+  @media (max-width: 800px) {
+    & {
+      width: 320px;
+      height: 420px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      transition: 0.5s;
+      box-shadow: -10px -20px 15px 15px rgba(255, 255, 255, 0.5) inset;
+    }
+  }
 `;
+
 const Ssg = styled.h2`
   font-size: 5rem;
   font-family: "Cormorant SC", serif;
@@ -82,8 +129,8 @@ const Ssg = styled.h2`
 `;
 const ShareButton = styled.div`
   position: absolute;
-  bottom: 150px;
-  left: 150px;
+  bottom: 50px;
+  left: 50px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -97,11 +144,22 @@ const TranformText = styled.div`
   font-size: 4rem;
   width: 350px;
   height: 100px;
+
   font-family: "Cormorant SC", serif;
   transform: rotate(90deg);
   position: absolute;
   bottom: 380px;
-  right: 150px;
+  right: 0px;
+
+  @media (max-width: 1200px) {
+    & {
+      font-size: 3.5rem;
+      bottom: 50px;
+      right: 0;
+      transition: 0.5s;
+      transform: rotate(0deg);
+    }
+  }
 `;
 
 const BlueColor = styled.span`

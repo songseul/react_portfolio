@@ -5,6 +5,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import "../style/Nav.css";
 import { Link } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Nav = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -22,6 +23,10 @@ const Nav = () => {
   };
   return (
     <Container>
+      <MobileMenu>
+        <GiHamburgerMenu size="2x" />
+      </MobileMenu>
+
       <NavBox>
         {menuArr.map((el, index) => {
           return (
@@ -56,6 +61,7 @@ const Nav = () => {
 
 export default Nav;
 
+// 네비게이션 전체 박스
 const Container = styled.div`
   width: 100%;
   height: 80px;
@@ -64,10 +70,24 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-
+  box-sizing: border-box;
+  padding: 20px;
   @media (max-width: 800px) {
     & {
       background-color: red;
+      justify-content: left;
+    }
+  }
+`;
+
+const MobileMenu = styled.div`
+  border: 1px solid #000;
+  width: 40px;
+  height: 40px;
+  display: none;
+  @media (max-width: 800px) {
+    & {
+      display: block;
     }
   }
 `;
@@ -77,6 +97,11 @@ const NavBox = styled.ul`
   align-items: center;
   font-size: 2.3rem;
   font-family: "Cormorant SC", serif;
+  @media (max-width: 800px) {
+    & {
+      display: none;
+    }
+  }
 `;
 
 const List = styled.li`
@@ -93,6 +118,7 @@ const IconBox = styled.div`
   position: absolute;
   right: 5%;
   top: 0;
+
   transform: translateY(50%);
   & div {
     margin-right: 1rem;
