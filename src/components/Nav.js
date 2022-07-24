@@ -6,6 +6,7 @@ import styled from "styled-components";
 import "../style/Nav.css";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import MobileNav from "./MobileNav";
 
 const Nav = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -71,20 +72,20 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   box-sizing: border-box;
-  padding: 20px;
+  padding-left: 20px;
   @media (max-width: 800px) {
     & {
-      background-color: red;
+      box-shadow: 10px 10px 10px rgba(14, 93, 221, 0.2);
       justify-content: left;
     }
   }
 `;
 
 const MobileMenu = styled.div`
-  border: 1px solid #000;
   width: 40px;
   height: 40px;
   display: none;
+  cursor: pointer;
   @media (max-width: 800px) {
     & {
       display: block;
@@ -92,7 +93,7 @@ const MobileMenu = styled.div`
   }
 `;
 
-const NavBox = styled.ul`
+export const NavBox = styled.ul`
   display: flex;
   align-items: center;
   font-size: 2.3rem;

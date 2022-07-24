@@ -47,18 +47,18 @@ const HomeContainer = styled.div`
   /* overflow: hidden; */
   width: 80%;
   height: 100vh;
-  background-color: #999;
+  /* background-color: #999; */
   position: relative;
   @media (max-width: 1200px) {
     & {
       width: 100%;
-      background-color: green;
+      /* background-color: green; */
     }
   }
   @media (max-width: 800px) {
     & {
       width: 100%;
-      background-color: blue;
+      /* background-color: blue; */
     }
   }
 `;
@@ -77,20 +77,25 @@ const Line = styled.div`
 const HomeFont = styled.h1`
   font-size: 5.5rem;
   font-family: "Cormorant SC", serif;
+
   margin-top: 10rem;
   margin-left: 20rem;
   @media (max-width: 1200px) {
     & {
       margin-left: 50px;
+      font-size: 4rem;
     }
   }
   @media (max-width: 800px) {
     & {
-      width: 100%;
-      margin-top: 3rem;
-      margin-left: 50px;
-      font-size: 4rem;
+      width: 50%;
+      font-size: 5vw;
       transition: 0.5s;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      margin-top: 3rem;
     }
   }
 `;
@@ -106,12 +111,12 @@ const HomeImg = styled.div`
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
   @media (max-width: 800px) {
     & {
-      width: 320px;
+      width: 90%;
       height: 420px;
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: 10rem;
       margin: auto;
       transition: 0.5s;
       box-shadow: -10px -20px 15px 15px rgba(255, 255, 255, 0.5) inset;
@@ -126,6 +131,11 @@ const Ssg = styled.h2`
   position: absolute;
   bottom: 18rem;
   right: 30rem;
+  @media (max-width: 1200px) {
+    & {
+      left: 4rem;
+    }
+  }
 `;
 const ShareButton = styled.div`
   position: absolute;
@@ -153,7 +163,7 @@ const TranformText = styled.div`
 
   @media (max-width: 1200px) {
     & {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       bottom: 50px;
       right: 0;
       transition: 0.5s;
