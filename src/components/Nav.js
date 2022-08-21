@@ -4,8 +4,7 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { useState } from "react";
 import styled from "styled-components";
 import "../style/Nav.css";
-import { Link } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { NavLink } from "react-router-dom";
 import MobileNav from "./MobileNav";
 
 const Nav = () => {
@@ -24,22 +23,15 @@ const Nav = () => {
   };
   return (
     <Container>
-      <MobileMenu>
-        <GiHamburgerMenu size="2x" />
-      </MobileMenu>
-
+      <MobileNav />
       <NavBox>
         {menuArr.map((el, index) => {
           return (
-            <Link to={el.element}>
-              <List
-                key={index}
-                className={`${index === currentTab ? "select" : ""}`}
-                onClick={() => selectMenuHandler(index)}
-              >
+            <NavLink to={el.element} className="nav-link">
+              <List key={index} onClick={() => selectMenuHandler(index)}>
                 {el.name}
               </List>
-            </Link>
+            </NavLink>
           );
         })}
       </NavBox>
@@ -64,6 +56,9 @@ export default Nav;
 
 // 네비게이션 전체 박스
 const Container = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 80px;
   //border-bottom: 1px solid;
@@ -75,20 +70,7 @@ const Container = styled.div`
   padding-left: 20px;
   @media (max-width: 800px) {
     & {
-      box-shadow: 10px 10px 10px rgba(14, 93, 221, 0.2);
       justify-content: left;
-    }
-  }
-`;
-
-const MobileMenu = styled.div`
-  width: 40px;
-  height: 40px;
-  display: none;
-  cursor: pointer;
-  @media (max-width: 800px) {
-    & {
-      display: block;
     }
   }
 `;

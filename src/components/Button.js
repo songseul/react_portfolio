@@ -8,6 +8,7 @@ const SyledButton = styled.button`
   border-radius: ${(props) => (props.size === "big" ? "200px" : "100px")};
   border: 2px solid #0e5ddd;
   color: #0e5ddd;
+  font-family: "Cormorant SC", serif;
 `;
 const Button = ({ color, size, text }) => (
   <SyledButton color={color} size={size}>

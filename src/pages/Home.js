@@ -1,7 +1,5 @@
 import React from "react";
-import { FiShare } from "react-icons/fi";
 import styled from "styled-components";
-import Button from "../components/Button";
 
 function Home() {
   return (
@@ -10,16 +8,10 @@ function Home() {
         <Line></Line>
         <HomeFont>
           Frontend Developer
-          <br />& Fashion Designer
+          <br />& Design
         </HomeFont>
         <HomeImg></HomeImg>
         <Ssg>SSG</Ssg>
-        <ShareButton>
-          <Button text="Link" />{" "}
-          <ShareIcon>
-            <FiShare />
-          </ShareIcon>
-        </ShareButton>
       </HomeContainer>
 
       <TranformText>
@@ -89,13 +81,15 @@ const HomeFont = styled.h1`
   @media (max-width: 800px) {
     & {
       width: 50%;
-      font-size: 5vw;
+
+      text-align: center;
+      font-size: 4vw;
       transition: 0.5s;
       position: absolute;
       left: 0;
       right: 0;
       margin: auto;
-      margin-top: 3rem;
+      margin-top: 1rem;
     }
   }
 `;
@@ -108,18 +102,20 @@ const HomeImg = styled.div`
   top: 10rem;
   right: 1rem;
   background-image: url(https://images.unsplash.com/photo-1611244420182-82cc3323eadc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHJpbmtpbmclMjB0ZWF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+  background-size: cover;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
   @media (max-width: 800px) {
     & {
-      width: 90%;
-      height: 420px;
+      width: 80%;
+      height: 400px;
       top: 0;
       left: 0;
       right: 0;
-      bottom: 10rem;
+      bottom: 15rem;
       margin: auto;
       transition: 0.5s;
-      box-shadow: -10px -20px 15px 15px rgba(255, 255, 255, 0.5) inset;
+
+      /* box-shadow: -10px -20px 15px 15px rgba(255, 255, 255, 0.5) inset; */
     }
   }
 `;
@@ -136,18 +132,6 @@ const Ssg = styled.h2`
       left: 4rem;
     }
   }
-`;
-const ShareButton = styled.div`
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-`;
-const ShareIcon = styled.span`
-  font-size: 3rem;
-  margin-left: 1rem;
 `;
 
 const TranformText = styled.div`

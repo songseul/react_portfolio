@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import GlobalStyle from "./style/globalStyle";
 import App from "./App";
 import { ThemeProvider } from "styled-components";

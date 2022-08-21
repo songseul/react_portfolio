@@ -1,0 +1,7 @@
+.modal_body {
+  display: flex;
+  justify-content: center;
+}
+.modal_body img {
+  width: 100%;
+}
