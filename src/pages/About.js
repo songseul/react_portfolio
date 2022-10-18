@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import Modals from "../components/Modal";
-import { aboutdata } from "../data/data.js";
-import styled from "styled-components";
-import "./About.scss";
+import React, { useState } from 'react';
+import Modals from '../components/Modal';
+import { aboutdata } from '../data/data.js';
+import styled from 'styled-components';
+import './About.scss';
 
-import skillIcon from "../assets/skill.png";
-import linkIcon from "../assets/link.png";
-import skillJsIcon from "../assets/skill_icon_1.png";
-import skillReactIcon from "../assets/skill_icon_2.png";
-import { FiInstagram } from "react-icons/fi";
-import { BsYoutube } from "react-icons/bs";
-import { AiOutlineGithub } from "react-icons/ai";
+import skillIcon from '../assets/skill.png';
+import linkIcon from '../assets/link.png';
+import skillJsIcon from '../assets/skill_icon_1.png';
+import skillReactIcon from '../assets/skill_icon_2.png';
+import { FiInstagram } from 'react-icons/fi';
+import { BsYoutube } from 'react-icons/bs';
+import { AiOutlineGithub } from 'react-icons/ai';
 
 function About() {
   const items = aboutdata.data;
   const [imgModalOn, setImgModalOn] = useState(false);
   const [img, setImg] = useState(
-    "https://cdn.pixabay.com/photo/2021/09/02/16/48/cat-6593947_960_720.jpg"
+    'https://cdn.pixabay.com/photo/2021/09/02/16/48/cat-6593947_960_720.jpg'
   );
 
   return (
@@ -29,13 +29,13 @@ function About() {
           </div>
 
           <section class="section">
-            <h1>내가 나타나 볼께 얍!</h1>
+            <h1>Works</h1>
 
             <ul class="grid">
-              {items.map((item) => (
+              {items.map(item => (
                 <React.Fragment>
                   <li class={item.class} key={`data-${item.id}`}>
-                    <img src={item.src} />
+                    <img src={item.src} alt="웹사이트 이미지" />
                     <button
                       onClick={() => {
                         setImgModalOn(true);
@@ -55,16 +55,25 @@ function About() {
           <AboutRightProfileTop>
             <div className="about_left_skill">
               <div>
-                <img src={skillIcon} className="skill_icon" />
+                <img
+                  src={skillIcon}
+                  className="skill_icon"
+                  alt="웹사이트 이미지"
+                />
               </div>
               <div className="about_skill_icons">
-                <img src={skillJsIcon} /> <img src={skillReactIcon} />
+                <img src={skillJsIcon} alt="웹사이트 이미지" />{' '}
+                <img src={skillReactIcon} alt="웹사이트 이미지" />
               </div>
             </div>
 
             <div className="about_right_link">
               <div>
-                <img src={linkIcon} className="link_icon" />
+                <img
+                  src={linkIcon}
+                  className="link_icon"
+                  alt="웹사이트 이미지"
+                />
               </div>
               <div className="about_link_icon">
                 <AboutIconBox>
@@ -87,12 +96,10 @@ function About() {
               <h2> • SSG • </h2>
               <h3>현재 프론트엔드 개발자를 지망하고 있습니다.</h3> <br />
               <p>
-                디자인과 영상에도 관심이 많으며, <br /> <br />
-                자체 쇼핑 애플리케이션을 개발 하여 <br /> <br />
-                저만의 브랜드 쇼핑몰을 만들줄 아는 프론트엔드 개발자와
-                디자이너가
-                <br /> <br />
-                되는 것을 꿈꾸고 있습니다.
+                크로스보더 커머스 플랫폼을 개발하여 전세계의 개발자와 디자이너가
+                <br />
+                플랫폼을 통해 함께 성장하는 목표를 가지고 있는 프론트엔드 개발자
+                입니다.
               </p>
             </div>
           </AboutRightProfileBottom>
@@ -204,7 +211,7 @@ const AboutRightProfileBottom = styled.div`
     margin-bottom: 2rem;
     font-size: 2rem;
     color: #0e5ddd;
-    font-family: "Cormorant SC", serif;
+    font-family: 'Cormorant SC', serif;
   }
   & h3 {
     margin-top: 1rem;

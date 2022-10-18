@@ -1,15 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 function Home() {
   return (
     <HomeBox>
       <HomeContainer>
         <Line></Line>
-        <HomeFont>
-          Frontend Developer
-          <br />& Design
-        </HomeFont>
+        <HomeFont>Frontend Developer</HomeFont>
         <HomeImg></HomeImg>
         <Ssg>SSG</Ssg>
       </HomeContainer>
@@ -58,7 +55,7 @@ const HomeContainer = styled.div`
 const Line = styled.div`
   width: 90%;
   height: 50px;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #0e5ddd;
   margin-top: 15rem;
   @media (max-width: 800px) {
     & {
@@ -68,9 +65,9 @@ const Line = styled.div`
 `;
 const HomeFont = styled.h1`
   font-size: 5.5rem;
-  font-family: "Cormorant SC", serif;
+  font-family: 'Cormorant SC', serif;
 
-  margin-top: 10rem;
+  margin-top: 5rem;
   margin-left: 20rem;
   @media (max-width: 1200px) {
     & {
@@ -122,7 +119,7 @@ const HomeImg = styled.div`
 
 const Ssg = styled.h2`
   font-size: 5rem;
-  font-family: "Cormorant SC", serif;
+  font-family: 'Cormorant SC', serif;
   color: #0e5ddd;
   position: absolute;
   bottom: 18rem;
@@ -139,7 +136,7 @@ const TranformText = styled.div`
   width: 350px;
   height: 100px;
 
-  font-family: "Cormorant SC", serif;
+  font-family: 'Cormorant SC', serif;
   transform: rotate(90deg);
   position: absolute;
   bottom: 380px;

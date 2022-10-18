@@ -1,22 +1,21 @@
-import { FiInstagram } from "react-icons/fi";
-import { BsYoutube } from "react-icons/bs";
-import { AiOutlineGithub } from "react-icons/ai";
-import { useState } from "react";
-import styled from "styled-components";
-import "../style/Nav.css";
-import { NavLink } from "react-router-dom";
-import MobileNav from "./MobileNav";
+import { FiInstagram } from 'react-icons/fi';
+import { BsYoutube } from 'react-icons/bs';
+import { AiOutlineGithub } from 'react-icons/ai';
+import { useState } from 'react';
+import styled from 'styled-components';
+import '../style/Nav.css';
+import { NavLink } from 'react-router-dom';
+import MobileNav from './MobileNav';
 
 const Nav = () => {
   const [currentTab, setCurrentTab] = useState(0);
   const menuArr = [
-    { name: "Home", element: "/" },
-    { name: "About", element: "/about" },
-    { name: "Project", element: "/project" },
-    { name: "Chat", element: "/chat" },
+    { name: 'Home', element: '/' },
+    { name: 'About', element: '/about' },
+    { name: 'Project', element: '/project' },
   ];
 
-  const selectMenuHandler = (index) => {
+  const selectMenuHandler = index => {
     // TIP: parameter로 현재 선택한 인덱스 값을 전달해야 하며, 이벤트 객체(event)는 쓰지 않습니다
     // TODO : 해당 함수가 실행되면 현재 선택된 Tab Menu 가 갱신되도록 함수를 완성하세요.
     setCurrentTab(index);
@@ -78,8 +77,8 @@ const Container = styled.div`
 export const NavBox = styled.ul`
   display: flex;
   align-items: center;
-  font-size: 2.3rem;
-  font-family: "Cormorant SC", serif;
+  font-size: 2rem;
+  font-family: 'Cormorant SC', serif;
   @media (max-width: 800px) {
     & {
       display: none;
