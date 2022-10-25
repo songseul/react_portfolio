@@ -136,11 +136,10 @@ const ProjectLeft = styled.div`
   height: 100vh;
   box-sizing: border-box;
   width: 29%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 1200px) {
+  @media (max-width: 476px) {
     width: 100%;
     height: 40vh;
   }
@@ -171,6 +170,9 @@ const ProjectLeft = styled.div`
 
 const FirstProject = styled.div`
   display: flex;
+  @media (max-width: 476px) {
+    flex-direction: column;
+  }
 `;
 
 const Line = styled.div`
@@ -182,4 +184,7 @@ const Line = styled.div`
 const SecondProject = styled.div`
   display: flex;
   margin-top: 50px;
+  @media (max-width: 476px) {
+    flex-direction: column-reverse;
+  }
 `;
