@@ -8,8 +8,8 @@ import skillIcon from '../assets/skill.png';
 import linkIcon from '../assets/link.png';
 import skillJsIcon from '../assets/skill_icon_1.png';
 import skillReactIcon from '../assets/skill_icon_2.png';
-import { FiInstagram } from 'react-icons/fi';
-import { BsYoutube } from 'react-icons/bs';
+import { MdWebAsset } from 'react-icons/md';
+import { SiTypescript } from 'react-icons/si';
 import { AiOutlineGithub } from 'react-icons/ai';
 
 function About() {
@@ -33,8 +33,8 @@ function About() {
 
             <ul class="grid">
               {items.map(item => (
-                <React.Fragment>
-                  <li class={item.class} key={`data-${item.id}`}>
+                <React.Fragment key={`data-${item.id}`}>
+                  <li class={item.class}>
                     <img src={item.src} alt="웹사이트 이미지" />
                     <button
                       onClick={() => {
@@ -62,8 +62,9 @@ function About() {
                 />
               </div>
               <div className="about_skill_icons">
-                <img src={skillJsIcon} alt="웹사이트 이미지" />{' '}
+                <img src={skillJsIcon} alt="웹사이트 이미지" />
                 <img src={skillReactIcon} alt="웹사이트 이미지" />
+                <TypeScriptIcon />
               </div>
             </div>
 
@@ -78,14 +79,13 @@ function About() {
               <div className="about_link_icon">
                 <AboutIconBox>
                   <div>
-                    <FiInstagram />
+                    <a href="https://songsari.tistory.com/">
+                      <MdWebAsset />
+                    </a>
                   </div>
-                  <div>
-                    <BsYoutube />
-                  </div>
-                  <div>
+                  <a href="https://github.com/songseul">
                     <AiOutlineGithub />
-                  </div>
+                  </a>
                 </AboutIconBox>
               </div>
             </div>
@@ -176,8 +176,14 @@ const AboutRightProfileTop = styled.div`
       width: 100%;
     }
     & .about_skill_icons img {
-      margin-top: 10px;
       width: 50px;
+      height: 50px;
+    }
+    .about_skill_icons {
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
   }
   & .about_right_link {
@@ -192,6 +198,13 @@ const AboutRightProfileTop = styled.div`
     width: 100%;
   }
 `;
+
+const TypeScriptIcon = styled(SiTypescript)`
+  width: 50px;
+  height: 50px;
+  color: #444;
+`;
+
 const AboutIconBox = styled.div`
   font-size: 40px;
   margin-top: 10px;

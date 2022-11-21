@@ -1,5 +1,4 @@
-import { FiInstagram } from 'react-icons/fi';
-import { BsYoutube } from 'react-icons/bs';
+import { MdWebAsset } from 'react-icons/md';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { useState } from 'react';
 import styled from 'styled-components';
@@ -37,13 +36,15 @@ const Nav = () => {
       <ul>
         <IconBox>
           <div>
-            <FiInstagram />
+            <a href="https://songsari.tistory.com/">
+              <MdWebAsset />
+            </a>
           </div>
+
           <div>
-            <BsYoutube />
-          </div>
-          <div>
-            <AiOutlineGithub />
+            <a href="https://github.com/songseul">
+              <AiOutlineGithub />
+            </a>
           </div>
         </IconBox>
       </ul>

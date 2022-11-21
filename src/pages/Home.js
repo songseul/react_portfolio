@@ -7,7 +7,7 @@ function Home() {
       <HomeContainer>
         <Line></Line>
         <HomeFont>Frontend Developer</HomeFont>
-        <HomeImg></HomeImg>
+        <HomeImg />
         <Ssg>SSG</Ssg>
       </HomeContainer>
 

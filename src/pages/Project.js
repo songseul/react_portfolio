@@ -31,7 +31,7 @@ function Project() {
               <br />
               Western Fashion Style을 프로젝트 주제로 작업 하였습니다.
             </p>
-            <a href="http://songsg93.com/songseulgi/main.html">
+            <a href="http://julia37.dothome.co.kr/songseulgi/main.html">
               <Button text="link" />
             </a>
           </div>
